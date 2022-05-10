@@ -1,0 +1,94 @@
+{
+    "name": "dh-webteam/dh-common",
+    "description": "Common packages/modules used for most Dartmouth-Hitchcock Drupal sites.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.dartmouth-hitchcock.org/",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "drupal/address": "^1.9",
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/config_filter": "^1.8",
+        "drupal/config_ignore": "^2.3",
+        "drupal/config_split": "^1.7",
+        "drupal/core-composer-scaffold": "9.2.*",
+        "drupal/core-project-message": "9.2.*",
+        "drupal/core-recommended": "9.2.6",
+        "drupal/core-vendor-hardening": "9.2.*",
+        "drupal/ctools": "^3.7",
+        "drupal/devel": "^4.1",
+        "drupal/embed": "^1.4",
+        "drupal/entity_browser": "^2.6",
+        "drupal/entity_embed": "^1.2",
+        "drupal/entity_reference_revisions": "^1.6",
+        "drupal/entity_usage": "^2.0@beta",
+        "drupal/entityqueue": "^1.2",
+        "drupal/inline_responsive_images": "^2.1",
+        "drupal/linkit": "^5.0@beta",
+        "drupal/media_entity_download": "^2.1",
+        "drupal/menu_breadcrumb": "^1.16",
+        "drupal/metatag": "^1.16",
+        "drupal/migrate_plus": "^5.1",
+        "drupal/migrate_tools": "^5.0",
+        "drupal/pantheon_advanced_page_cache": "^1.2",
+        "drupal/paragraphs": "^1.9",
+        "drupal/pathauto": "^1.6",
+        "drupal/redirect": "^1.5",
+        "drupal/redis": "^1.1",
+        "drupal/rename_admin_paths": "^2.0",
+        "drupal/schema_metatag": "^2.2",
+        "drupal/simple_sitemap": "^3.10",
+        "drupal/stage_file_proxy": "^1.1",
+        "drupal/svg_image": "^1.10",
+        "drupal/token": "^1.5",
+        "drupal/video_embed_field": "^2.2",
+        "drush/drush": "^10.6",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true
+        }
+    },
+    "autoload": {
+        "classmap": [
+            "web/private/scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "autoload-dev": {
+        "files": [
+            "load.environment.php"
+        ]
+    },
+    "patchLevel": {
+        "drupal/core": "-p2"
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true
+    },
+    "composer-version": "^2.10"
+}
