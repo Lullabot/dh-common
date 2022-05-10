@@ -52,7 +52,7 @@
         "drupal/svg_image": "^1.10",
         "drupal/token": "^1.5",
         "drupal/video_embed_field": "^2.2",
-        "drush/drush": "^10.6",
+        "drush/drush": "10.6.2",
         "vlucas/phpdotenv": "^5.3"
     },
     "conflict": {
